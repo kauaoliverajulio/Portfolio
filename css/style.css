@@ -35,6 +35,11 @@ body {
   height: auto;
 }
 
+header {
+  position: relative; /* Ensure z-index works */
+  z-index: 10; /* Ensure header is on top */
+}
+
 .container {
     display: flex;
     justify-content: space-between;

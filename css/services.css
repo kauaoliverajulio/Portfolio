@@ -37,7 +37,7 @@
     border-radius: 10px;
     background-color: var(--color-black-saturated);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 20vh; /* Use vh for min-height */
+    min-height: 28vh; /* Use vh for min-height */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -154,7 +154,11 @@
         height: auto; /* Allow content to define height */
     }
 
-    .services-container h2,
+    .services-container h2 {
+        display: block; /* Ensure it's a block element */
+        font-size: 36px; /* Smaller font size */
+    }
+
     .Contact-container h2 {
         font-size: 36px; /* Smaller font size */
     }
@@ -166,7 +170,7 @@
     }
 
     .services-container li {
-        max-width: 90%; /* Adjust max-width */
+        max-width: 100%; /* Ensure full width */
         padding: 20px; /* Reduced padding */
         margin: 10px auto; /* Center items */
         min-height: auto; /* Remove fixed min-height */
