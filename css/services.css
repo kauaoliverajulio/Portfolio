@@ -11,27 +11,27 @@
     text-align: center;
 }
 
-.services-container h2 {
+.what-i-do-section h2 {
     font-size: 48px;
     font-weight: bold;
 }
 
-.services-container p {
+.what-i-do-section p {
     font-size: 18px;
     color: var(--color-gray3);
     padding: 20px 0;
 }
 
-.services-container ul {
+.what-i-do-section ul {
     display: flex;
     gap: 1.5vw; /* Use vw for gap */
     justify-content: center;
     padding: 50px 0 ;
 }
 
-.services-container li {
+.what-i-do-section li {
     display: block;
-    max-width: 50vw; /* Use vw for max-width */
+    width: 40vw; /* Fixed width for proportionality */
     padding: 2vw; /* Use vw for padding */
     margin: 0 0.5vw; /* Use vw for margin */
     border-radius: 10px;
@@ -154,7 +154,7 @@
         height: auto; /* Allow content to define height */
     }
 
-    .services-container h2 {
+    .what-i-do-section h2 {
         display: block; /* Ensure it's a block element */
         font-size: 36px; /* Smaller font size */
     }
@@ -163,17 +163,17 @@
         font-size: 36px; /* Smaller font size */
     }
 
-    .services-container ul {
+    .what-i-do-section ul {
         flex-direction: column; /* Stack service items vertically */
         padding: 20px 0;
         gap: 0; /* Remove gap to prevent potential overflow */
     }
 
-    .services-container li {
+    .what-i-do-section li {
         max-width: 100%; /* Ensure full width */
         padding: 20px; /* Reduced padding */
         margin: 10px auto; /* Center items */
-        min-height: auto; /* Remove fixed min-height */
+        min-height: 10vh; /* Remove fixed min-height */
     }
 
     .skills-container {
