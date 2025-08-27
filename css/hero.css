@@ -1,0 +1,43 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    padding: 325px 128px;
+}
+
+.hero-container h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-img {
+    display: block;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 168px;
+    top: 50%;
+    transform: translateY(-50%);
+    #imagem-me {
+        width: 100%;
+        height: 100%;
+        border-radius: 9999px;
+        border: 10px solid var(--color-black-saturated);
+        box-shadow: 0px 0px 8px 4px rgba(26, 24, 24, 0.3);
+    }
+}
+
+.hero-container p {
+    color: var(--color-gray3);
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.hero-container ul {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+
+
+

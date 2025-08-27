@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --color-cynical: #171717;
+  --color-gray2: #4F4F3F;
+  --color-gray1: #333333;
+  --color-gray3: #828282;
+  --color-gray6: #f2f2f2;
+  --color-green2: #27ae60;
+  --color-white: #ffffff;
+  --color-gray13: #212121;
+  --color-black: #000000;
+  --color-eerie-black: rgba(30, 29, 29, 0.2);
+  --color-black-saturated: #202020;
+  --color-cray-fish: #535353;
+  --color-red: #e53935;
+  --color-blue: #2196f3;
+  --color-yellow: #fdd835;
+  --color-orange: #ff9800;
+  --color-green: #4caf50;
+} 
+
+* {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-cynical);
+  color: var(--color-white);
+  height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-green2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2ecc71;
+}
+
+#btn-hero-contact {
+    border: 1px solid var(--color-gray6);
+    background-color: transparent;
+}
+
+#btn-hero-contact:hover {
+    background-color: var(--color-gray6);
+    color: var(--color-cynical);
+}
+
+a {
+  color: var(--color-white);
+}

@@ -1,0 +1,47 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 200px 128px;
+    width: 65%;
+}
+
+.about-container h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.about-container p {
+    font-size: 18px;
+    padding: 20px 0 ;
+}
+
+.about-container ul {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.about-container li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.about-container a {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.about-container i {
+    font-size: 48px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.about-container a:hover i {
+    color: var(--color-green2);
+}

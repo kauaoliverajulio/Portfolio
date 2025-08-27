@@ -1,0 +1,150 @@
+.services {
+    height: 100vh;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-container h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.services-container p {
+    font-size: 18px;
+    color: var(--color-gray3);
+    padding: 20px 0;
+}
+
+.services-container ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 0 ;
+}
+
+.services-container li {
+    display: block;
+    max-width: 800px;
+    padding: 40px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: var(--color-black-saturated);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.services-container i {
+    font-size: 48px;
+    color: var(--color-green2);
+    padding: 50px 0;
+}
+
+.skills-container {
+    padding: 140px 0;
+}
+
+.skills-container ul {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--color-black-saturated);
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.skills-container li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+.skills-container h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.skills-container h1 {
+    font-size: 72px;
+    color: var(--color-gray3);
+    transition: all 0.5s ease-in-out;
+}
+
+#html {
+    color: var(--color-red);
+}
+
+#css {
+    color: var(--color-blue);
+}
+
+#js {
+    color: var(--color-yellow);
+}
+
+#java {
+    color: var(--color-orange);
+}
+
+.Contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.Contact-container h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.Contact-container p {
+    font-size: 18px;
+    color: var(--color-gray3);
+}
+
+.Contact-container ul {
+    display: flex;
+    gap: 20px;
+    padding: 5px 0;
+}
+
+.Contact-container li {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    background-color: var(--color-cynical);
+}
+
+.Contact-container i {
+    font-size: 48px;
+    color: var(--color-green2);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer-container p {
+    font-size: 12px;
+    color: var(--color-gray3);
+}
