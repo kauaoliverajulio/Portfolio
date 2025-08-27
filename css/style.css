@@ -67,6 +67,19 @@ body {
     color: var(--color-cynical);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: var(--color-white);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Tablet styles */
+}
+
+@media (max-width: 480px) {
+  /* Mobile styles */
 }

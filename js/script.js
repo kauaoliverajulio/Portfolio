@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // Smooth scrolling
@@ -6,9 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
     });
   });
 
@@ -25,40 +31,61 @@ document.addEventListener('DOMContentLoaded', () => {
   sr.reveal('.hero-img', { origin: 'right' });
   sr.reveal('.about-container h2, .about-container p, .about-container ul', { origin: 'bottom' });
   sr.reveal('.services-container h2, .services-container ul li', { origin: 'bottom', interval: 200 });
-  sr.reveal('.skills-container h2, .skills-container ul li', { origin: 'bottom', interval: 200 });
+  sr.reveal('.skills-container h2, .skills-container ul li', { 
+    origin: 'bottom', 
+    interval: 200, 
+    afterReveal: animateNumbers 
+  });
   sr.reveal('.Contact-container h2, .Contact-container p, .Contact-container ul', { origin: 'bottom' });
   sr.reveal('.footer-container', { origin: 'bottom' });
 
+  // Menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navbarUl = document.querySelector('.navbar ul');
 
+  menuToggle.addEventListener('click', () => {
+    navbarUl.classList.toggle('active');
+  });
+
+  // Função de animação dos números
   function animateNumbers() {
     const skillPercentages = document.querySelectorAll('.skills-container h1');
+
     skillPercentages.forEach(skill => {
-      const target = parseInt(skill.innerText);
-      const duration = 1500; // 1.5 seconds
-      let startTime;
+              const target = parseInt(skill.dataset.value); // Read target here, after delay 
+      if (isNaN(target) || target <= 0) {
+        skill.innerText = "0%";
+        return;
+      }
 
-      const update = (currentTime) => {
-        if (!startTime) {
-          startTime = currentTime;
-        }
+      // Reset inicial
+      skill.innerText = "0%";
 
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        const current = Math.floor(progress * target);
+      const duration = 1500; // 1.5s
+      let startTime = null;
 
-        skill.innerText = current + '%';
+      function easeOutQuad(t) {
+        return t * (2 - t); // curva suave
+      }
+
+      function update(currentTime) {
+        if (!startTime) startTime = currentTime;
+
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuad(progress);
+        const current = Math.floor(easedProgress * target);
+
+        skill.innerText = current + "%";
 
         if (progress < 1) {
           requestAnimationFrame(update);
         } else {
-          skill.innerText = target + '%';
+          skill.innerText = target + "%"; // garante o valor final
         }
-      };
+      }
 
-      skill.innerText = '0%';
       requestAnimationFrame(update);
     });
   }
-
-  animateNumbers();
 });

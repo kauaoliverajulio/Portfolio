@@ -1,5 +1,5 @@
 .services {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .services-container {
@@ -24,20 +24,20 @@
 
 .services-container ul {
     display: flex;
-    gap: 20px;
+    gap: 1.5vw; /* Use vw for gap */
     justify-content: center;
     padding: 50px 0 ;
 }
 
 .services-container li {
     display: block;
-    max-width: 800px;
-    padding: 40px;
-    margin: 0 10px;
+    max-width: 50vw; /* Use vw for max-width */
+    padding: 2vw; /* Use vw for padding */
+    margin: 0 0.5vw; /* Use vw for margin */
     border-radius: 10px;
     background-color: var(--color-black-saturated);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 300px;
+    min-height: 20vh; /* Use vh for min-height */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -51,18 +51,18 @@
 }
 
 .skills-container {
-    padding: 140px 0;
+    padding: 10vh 0; /* Use vh for vertical padding */
 }
 
 .skills-container ul {
     display: flex;
-    gap: 20px;
-    padding: 30px;
+    gap: 1.5vw; /* Use vw for gap */
+    padding: 2vw; /* Use vw for padding */
     background-color: var(--color-black-saturated);
     border-radius: 10px;
-    height: 400px;
+    height: auto; /* Allow content to define height */
     text-align: center;
-    margin: 40px 0;
+    margin: 3vh 0; /* Use vh for margin */
 }
 
 .skills-container li {
@@ -71,7 +71,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 30px;
+    padding: 2vw; /* Use vw for padding */
 }
 
 .skills-container h3 {
@@ -106,7 +106,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 8vh 0; /* Use vh for vertical padding */
 }
 
 .Contact-container h2 {
@@ -121,14 +121,14 @@
 
 .Contact-container ul {
     display: flex;
-    gap: 20px;
+    gap: 1.5vw; /* Use vw for gap */
     padding: 5px 0;
 }
 
 .Contact-container li {
     display: flex;
     flex-direction: column;
-    padding: 0 30px;
+    padding: 0 2vw; /* Use vw for horizontal padding */
     background-color: var(--color-cynical);
 }
 
@@ -147,4 +147,75 @@
 .footer-container p {
     font-size: 12px;
     color: var(--color-gray3);
+}
+
+@media (max-width: 768px) {
+    .services {
+        height: auto; /* Allow content to define height */
+    }
+
+    .services-container h2,
+    .Contact-container h2 {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .services-container ul {
+        flex-direction: column; /* Stack service items vertically */
+        padding: 20px 0;
+        gap: 0; /* Remove gap to prevent potential overflow */
+    }
+
+    .services-container li {
+        max-width: 90%; /* Adjust max-width */
+        padding: 20px; /* Reduced padding */
+        margin: 10px auto; /* Center items */
+        min-height: auto; /* Remove fixed min-height */
+    }
+
+    .skills-container {
+        padding: 80px 0; /* Reduced padding */
+    }
+
+    .skills-container ul {
+        flex-direction: column; /* Stack skill items vertically */
+        height: auto; /* Allow content to define height */
+        padding: 20px;
+        gap: 0; /* Remove gap to prevent potential overflow */
+    }
+
+    .skills-container li {
+        padding: 15px; /* Reduced padding */
+    }
+
+    .skills-container h1 {
+        font-size: 60px; /* Smaller font size */
+    }
+
+    .Contact-container {
+        padding: 50px 0; /* Reduced padding */
+    }
+
+    .Contact-container ul {
+        flex-direction: column; /* Stack contact items vertically */
+        gap: 0; /* Remove gap to prevent potential overflow */
+    }
+
+    .Contact-container li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-container h2,
+    .Contact-container h2 {
+        font-size: 28px; /* Even smaller font size */
+    }
+
+    .services-container li {
+        max-width: 95%; /* Further adjust max-width */
+    }
+
+    .skills-container h1 {
+        font-size: 48px; /* Even smaller font size */
+    }
 }

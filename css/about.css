@@ -5,7 +5,7 @@
     align-items: center;
     margin: 0 auto;
     text-align: center;
-    padding: 200px 128px;
+    padding: 200px 10vw; /* Use vw for horizontal padding */
     width: 65%;
 }
 
@@ -44,4 +44,31 @@
 
 .about-container a:hover i {
     color: var(--color-green2);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 100px 20px; /* Reduced padding for smaller screens */
+        width: 90%; /* Adjust width */
+    }
+
+    .about-container h2 {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .about-container ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 80px 15px; /* Further reduced padding */
+        width: 95%; /* Adjust width */
+    }
+
+    .about-container h2 {
+        font-size: 28px; /* Even smaller font size */
+    }
 }
